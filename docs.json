@@ -1,72 +1,87 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "AfuChat",
+  "theme": "almond",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#00BCD4",
+    "light": "#E0F7FA",
+    "dark": "#00838F"
   },
   "favicon": "/favicon.svg",
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/afuchat/AfuChat-Supa"
+    }
+  },
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "download"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account/signup",
+              "account/profile",
+              "account/security",
+              "account/privacy"
+            ]
+          },
+          {
+            "group": "Messaging",
+            "pages": [
+              "messaging/chats",
+              "messaging/groups",
+              "messaging/channels",
+              "messaging/stories"
+            ]
+          },
+          {
+            "group": "Social",
+            "pages": [
+              "social/feed",
+              "social/discover",
+              "social/communities"
+            ]
+          },
+          {
+            "group": "Wallet & Payments",
+            "pages": [
+              "wallet/overview",
+              "wallet/acoin",
+              "wallet/topup",
+              "wallet/send-receive"
+            ]
+          },
+          {
+            "group": "Apps & Features",
+            "pages": [
+              "features/afuai",
+              "features/games",
+              "features/gifts",
+              "features/mini-programs",
+              "features/premium",
+              "features/prestige"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

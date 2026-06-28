@@ -1,0 +1,108 @@
+{
+  "projectType": "saas",
+  "projectName": "AfuChat",
+  "projectDescription": "AfuChat is a mobile-first super app combining real-time messaging, social feed, AI assistant, digital wallet, virtual gifts, games, and mini programs into one platform.",
+  "theme": "almond",
+  "primaryColor": "#00BCD4",
+  "lightColor": "#E0F7FA",
+  "darkColor": "#00838F",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "download"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account/signup",
+              "account/profile",
+              "account/security",
+              "account/privacy"
+            ]
+          },
+          {
+            "group": "Messaging",
+            "pages": [
+              "messaging/chats",
+              "messaging/groups",
+              "messaging/channels",
+              "messaging/stories"
+            ]
+          },
+          {
+            "group": "Social",
+            "pages": [
+              "social/feed",
+              "social/discover",
+              "social/communities"
+            ]
+          },
+          {
+            "group": "Wallet & Payments",
+            "pages": [
+              "wallet/overview",
+              "wallet/acoin",
+              "wallet/topup",
+              "wallet/send-receive"
+            ]
+          },
+          {
+            "group": "Apps & Features",
+            "pages": [
+              "features/afuai",
+              "features/games",
+              "features/gifts",
+              "features/mini-programs",
+              "features/premium",
+              "features/prestige"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Real-time 1-on-1 and group messaging with voice messages, reactions, and read receipts",
+    "Social feed with posts, likes, replies, follows, and image sharing",
+    "24-hour Stories with video and image support",
+    "AfuAI — conversational AI assistant with executable actions and user context awareness",
+    "Dual currency wallet: Nexa (XP) and ACoin with M-Pesa, Visa, and Mastercard top-up",
+    "Virtual gift catalog with rarity system and marketplace",
+    "8 in-browser games with ACoin power-ups",
+    "Mini Programs: airtime, data bundles, bills, hotel bookings, event tickets, money transfers",
+    "Premium subscriptions (Silver/Gold/Platinum) with verified badge",
+    "Prestige system with achievement tiers: Bronze, Silver, Gold, Diamond, Obsidian, Legend",
+    "Digital ID card with QR code sharing",
+    "Username marketplace",
+    "Offline-first architecture with auto-sync on reconnect",
+    "Push notifications with customizable preferences",
+    "Available on Android and Web"
+  ],
+  "publicApiSurface": [
+    "GET /api/healthz — server health check",
+    "POST /api/ai/chat — AI chat proxy",
+    "POST /api/chats/create — create a new 1-on-1 chat",
+    "POST /api/auth/resolve-identifier — resolve username or phone to account",
+    "POST /api/payments/initiate — initiate a payment (M-Pesa, Visa, Mastercard)",
+    "POST /api/payments/webhook — Pesapal IPN handler",
+    "GET /api/payments/status/:merchantRef — poll payment order status",
+    "GET /@:handle — public SEO profile page",
+    "GET /sitemap.xml — XML sitemap",
+    "GET /robots.txt — robots file"
+  ]
+}

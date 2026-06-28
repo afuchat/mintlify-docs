@@ -1,0 +1,221 @@
+---
+title: "Fix Common AfuChat Problems: Troubleshooting Guide"
+sidebarTitle: "Troubleshooting"
+description: "Step-by-step fixes for common AfuChat problems — login issues, failed payments, messages not sending, slow app, notifications, and storage."
+---
+
+Most AfuChat issues can be resolved quickly with a few targeted steps. This guide covers the most common problems users run into, organised by category. If you work through the steps here and still can't resolve the issue, the [Support Center](#contact-support) is always available — our AI assistant responds instantly, and a human agent follows up within 2–4 hours.
+
+---
+
+## Login & Account Issues
+
+### Can't log in or forgot your password
+
+<Steps>
+  <Step title="Tap 'Forgot Password' on the login screen">
+    Enter your registered email address or phone number and tap **Send Reset Link**.
+  </Step>
+  <Step title="Check your inbox (and spam folder)">
+    AfuChat sends a password reset email via our transactional email service. If it isn't in your inbox within 2 minutes, check your spam or junk folder.
+  </Step>
+  <Step title="Follow the link in the email">
+    The reset link is valid for a limited time. Tap it, set a new password, and log back in.
+  </Step>
+  <Step title="Try an alternative sign-in method">
+    If you originally signed up with **Google** or **GitHub**, use that OAuth option on the login screen instead of email and password.
+  </Step>
+</Steps>
+
+<Tip>
+  If you've lost access to the email address on your account, open a support ticket categorised as **Account & Login** and provide as much identifying information as possible so the team can verify your identity.
+</Tip>
+
+---
+
+### Account locked
+
+If your account has been suspended or locked due to a policy violation or suspicious activity, you will see a notice when you attempt to log in.
+
+- **Policy violation** — Review the notice in-app for the specific reason. You may submit an appeal through the Support Center by opening an **Account & Login** ticket.
+- **Suspicious activity** — If AfuChat detected unusual sign-in behaviour, you will be prompted to verify your identity via OTP before regaining access.
+- **Two-factor authentication lockout** — If you've lost access to your 2FA device, contact support at **support@afuchat.com** with your account email and @handle.
+
+<Warning>
+  Do not create a new account to bypass a suspension. Duplicate accounts may result in a permanent ban. Use the official appeals process instead.
+</Warning>
+
+---
+
+### OTP not received
+
+One-time passwords (OTPs) are sent by SMS or email depending on how your account is configured.
+
+1. **Wait 60 seconds** — OTPs can take up to a minute to arrive, especially during high-traffic periods.
+2. **Check your spam folder** — Email-based OTPs sometimes land in junk mail.
+3. **Confirm the correct number or email is on file** — If you've changed your phone number or email recently, the OTP is going to the old address.
+4. **Tap "Resend"** — Most OTP screens have a resend option. Wait for the cooldown timer before requesting a new code.
+5. **Check carrier filters** — Some mobile carriers block shortcode SMS messages. Try requesting the OTP to your email instead.
+
+---
+
+## Messages & Connectivity
+
+### Messages not sending
+
+AfuChat includes **offline message queuing** — if you're not connected to the internet, your outgoing messages are saved locally and automatically sent the moment your connection is restored. You don't need to retype or resend them manually.
+
+If messages are failing even when you appear to be online:
+
+1. **Check your internet connection** — Switch between Wi-Fi and mobile data to isolate the issue.
+2. **Force-close and reopen the app** — This re-establishes the real-time connection to AfuChat servers.
+3. **Look for a connectivity indicator** — AfuChat displays an offline banner when it cannot reach the server. Messages sent during this time are queued and will sync automatically on reconnect.
+4. **Check if the recipient has blocked you** — Blocked users cannot send messages to the person who blocked them.
+5. **Update the app** — An outdated app version may fail to connect properly. Check for updates in the Play Store or refresh your browser tab on the web.
+
+<Note>
+  If you were offline and came back online, give the app 10–15 seconds to sync your pending message queue before assuming something is wrong.
+</Note>
+
+---
+
+### Real-time updates not loading
+
+AfuChat uses Supabase Realtime for live chat, feed updates, and notifications. If updates seem stuck:
+
+1. **Pull to refresh** on the feed or chat screen.
+2. **Force-close and reopen the app** to trigger a fresh WebSocket connection.
+3. **Check your network** — Realtime connections require a stable internet connection. Spotty Wi-Fi or a weak mobile signal can interrupt the stream.
+4. **Disable a VPN or proxy** — Some VPN configurations block WebSocket connections, which AfuChat relies on for real-time features.
+5. **Try the web version** at [afuchat.com](https://afuchat.com) to confirm whether the issue is device-specific.
+
+---
+
+### Media not loading
+
+Images, videos, and voice messages are served from AfuChat's CDN at `cdn.afuchat.com`.
+
+1. **Check your internet speed** — Large media files require a stable connection. Try loading a smaller image first.
+2. **Clear the app cache** — Go to **Settings → Storage** in the app to clear cached media. This frees up space and forces fresh downloads.
+3. **Check available storage** — If your device is nearly full, media may fail to download. Free up at least 500 MB of storage.
+4. **Reload the conversation** — Navigate away from the chat and return. This re-triggers media download requests.
+5. **Disable data-saving mode** — If you're on a restricted data plan and have enabled data-saving features, large media may be blocked. Check your device network settings.
+
+---
+
+## Wallet & Payments
+
+### Payment failed
+
+If your top-up or transaction was declined:
+
+1. **Double-check your payment details** — Verify your card number, expiry date, CVV, and billing address match your bank's records.
+2. **Confirm sufficient funds** — Ensure your card or M-Pesa wallet has enough balance to cover the amount plus any bank fees.
+3. **Check with your bank** — Some banks block international or online transactions by default. Contact your bank to authorise the payment.
+4. **Try a different payment method** — If Visa or Mastercard is failing, try M-Pesa, or vice versa.
+5. **Wait and retry** — Payment processors occasionally have temporary outages. Wait 10 minutes and try again.
+
+<Note>
+  A failed payment should not charge your account. If you see a charge for a transaction that did not complete, contact your bank and open a **Payments & ACoins** support ticket with the transaction reference number.
+</Note>
+
+---
+
+### ACoins not credited after top-up
+
+ACoins normally appear in your wallet within **60 seconds** of a successful payment.
+
+<Steps>
+  <Step title="Wait 5 minutes">
+    Payment processing can occasionally take a few extra minutes. Refresh your wallet screen by pulling down.
+  </Step>
+  <Step title="Confirm the payment succeeded with your bank">
+    Check your bank app or M-Pesa message history to confirm the deduction went through. If no deduction occurred, the payment failed — try again.
+  </Step>
+  <Step title="Collect your transaction reference number">
+    Find the reference number in your bank statement, M-Pesa message, or payment confirmation email.
+  </Step>
+  <Step title="Open a support ticket">
+    Go to **Settings → Help → Support Center** and open a **Payments & ACoins** ticket. Include the transaction reference number, the amount, the date and time, and your @handle. The team can manually credit missing ACoins once the payment is verified.
+  </Step>
+</Steps>
+
+---
+
+### Transfer didn't go through
+
+If you tried to send ACoins or complete a mini program transaction and it failed:
+
+1. **Check your ACoin balance** — Make sure you had sufficient ACoins at the time of the transfer.
+2. **Verify the recipient's @handle** — Transfers to an incorrect handle will fail. Double-check the spelling.
+3. **Check for transfer limits** — Some transaction types have daily or per-transaction limits for security reasons.
+4. **Look for an error message** — AfuChat shows specific error messages for most failure states. Note the exact wording and include it in your support ticket.
+
+---
+
+## App Performance
+
+### App is slow or crashing
+
+<Steps>
+  <Step title="Restart the app">
+    Force-close AfuChat completely and reopen it. This clears any memory leak or stuck process.
+  </Step>
+  <Step title="Restart your device">
+    A full device restart clears background processes that may be competing for memory.
+  </Step>
+  <Step title="Check available storage">
+    Android devices with less than 500 MB of free storage often experience performance degradation. Go to **Settings → Storage** inside AfuChat to clear cached media and offline content.
+  </Step>
+  <Step title="Update the app">
+    Open the Play Store, search for AfuChat, and install any pending updates. Bug fixes and performance improvements ship regularly.
+  </Step>
+  <Step title="Reinstall the app">
+    If crashes persist, uninstall AfuChat and reinstall from the Play Store. Your account data is stored server-side and will not be lost.
+  </Step>
+</Steps>
+
+<Tip>
+  If the app crashes consistently when performing a specific action (for example, opening a particular chat or loading the feed), note the exact steps and include them when submitting a **Technical Issue** ticket. This helps the team reproduce and fix the bug faster.
+</Tip>
+
+---
+
+### Notifications not working
+
+1. **Check in-app notification settings** — Go to **Settings → Notifications** and confirm that the categories you care about (messages, reactions, gifts, etc.) are enabled.
+2. **Check device-level permissions** — On Android, go to **Device Settings → Apps → AfuChat → Notifications** and make sure notifications are allowed.
+3. **Disable battery optimisation for AfuChat** — Android's battery saver can prevent background notification delivery. Add AfuChat to your device's "unrestricted" or "not optimised" battery list.
+4. **Check Do Not Disturb** — If your phone is in Do Not Disturb mode, notifications may be silenced.
+5. **Sign out and back in** — This re-registers your push notification token with AfuChat's servers. Go to **Settings → Sign Out**, then sign back in.
+
+---
+
+### Storage usage
+
+AfuChat caches media locally to make loading faster. Over time this can consume significant storage space.
+
+- **Clear media cache** — Go to **Settings → Storage** in the app. You can see a breakdown by category (images, videos, documents) and clear specific buckets.
+- **Manage offline videos** — Go to **Settings → Offline Videos** to remove saved video content you no longer need.
+- **Automatic cache management** — AfuChat automatically evicts old cache entries when storage is low, but you can manually trigger a clear at any time.
+
+---
+
+## Contact Support
+
+If none of the steps above resolve your issue, the AfuChat support team is here to help. Our AI assistant provides an instant first response, and a human agent follows up within **2–4 hours** during business hours.
+
+<CardGroup cols={2}>
+  <Card title="In-App Support Center" icon="headset">
+    Tap **Settings → Help** to open the Support Center. Select the category that best matches your issue, describe what happened, and submit. You can track your ticket status and reply to messages from the **My Tickets** tab.
+  </Card>
+  <Card title="Email Support" icon="envelope">
+    Send a detailed message to **support@afuchat.com**. Include your @handle, the device and OS version, a description of the problem, and any screenshots or transaction IDs that are relevant.
+  </Card>
+</CardGroup>
+
+<Note>
+  **Support contact:** support@afuchat.com
+
+  For the fastest resolution, always include your **@handle**, the **date and time** the issue occurred, and any **error messages** you saw. If submitting a payments issue, include the **transaction reference number**.
+</Note>
