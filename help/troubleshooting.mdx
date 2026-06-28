@@ -81,7 +81,7 @@ If messages are failing even when you appear to be online:
 
 ### Real-time updates not loading
 
-AfuChat uses Supabase Realtime for live chat, feed updates, and notifications. If updates seem stuck:
+AfuChat relies on a persistent live connection for chat, feed updates, and notifications. If updates seem stuck:
 
 1. **Pull to refresh** on the feed or chat screen.
 2. **Force-close and reopen the app** to trigger a fresh WebSocket connection.
@@ -93,7 +93,7 @@ AfuChat uses Supabase Realtime for live chat, feed updates, and notifications. I
 
 ### Media not loading
 
-Images, videos, and voice messages are served from AfuChat's CDN at `cdn.afuchat.com`.
+Images, videos, and voice messages are streamed from AfuChat's media servers. If they aren't loading:
 
 1. **Check your internet speed** — Large media files require a stable connection. Try loading a smaller image first.
 2. **Clear the app cache** — Go to **Settings → Storage** in the app to clear cached media. This frees up space and forces fresh downloads.
@@ -187,7 +187,7 @@ If you tried to send ACoins or complete a mini program transaction and it failed
 2. **Check device-level permissions** — On Android, go to **Device Settings → Apps → AfuChat → Notifications** and make sure notifications are allowed.
 3. **Disable battery optimisation for AfuChat** — Android's battery saver can prevent background notification delivery. Add AfuChat to your device's "unrestricted" or "not optimised" battery list.
 4. **Check Do Not Disturb** — If your phone is in Do Not Disturb mode, notifications may be silenced.
-5. **Sign out and back in** — This re-registers your push notification token with AfuChat's servers. Go to **Settings → Sign Out**, then sign back in.
+5. **Sign out and back in** — This refreshes your notification registration. Go to **Settings → Sign Out**, then sign back in.
 
 ---
 

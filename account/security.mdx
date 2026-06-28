@@ -1,10 +1,10 @@
 ---
 title: "Secure Your AfuChat Account with 2FA and Device Lock"
 sidebarTitle: "Security"
-description: "Learn how to change your password, enable TOTP two-factor authentication, manage linked OAuth accounts, and review device security on AfuChat."
+description: "Learn how to change your password, enable TOTP two-factor authentication, manage biometric device lock, and export or delete your AfuChat account data."
 ---
 
-AfuChat gives you multiple layers of account protection — from a strong password and two-factor authentication to biometric device lock and linked social accounts. Spending a few minutes in **Settings → Security & Data** significantly reduces the risk of unauthorized access.
+AfuChat gives you multiple layers of account protection — from a strong password and two-factor authentication to biometric device lock. Spending a few minutes in **Settings → Security & Data** significantly reduces the risk of unauthorized access.
 
 ## Change your password
 
@@ -62,32 +62,15 @@ If you lose access to your authenticator app, you can remove 2FA via email recov
   AfuChat does not issue backup codes. Your email address is the only recovery path if you lose your authenticator app. Make sure your registered email is one you can always access — and keep your authenticator app backed up (Authy and 1Password both offer multi-device sync). If you permanently lose access to both your authenticator and your email, account recovery may not be possible.
 </Warning>
 
-## Linked OAuth accounts
-
-You can connect or disconnect social sign-in providers under **Settings → Security & Data → Linked Accounts**.
-
-<Accordion title="Google">
-  Google sign-in is fully supported. Tap **Connect** next to Google to link your account. Once linked, you can sign in with one tap from the login screen. Tap **Remove** to disconnect it — note that at least one sign-in method must remain active.
-</Accordion>
-
-<Accordion title="GitHub (coming soon)">
-  GitHub OAuth is on the roadmap. When available, it will appear in the Linked Accounts screen and can be connected or removed in the same way as Google.
-</Accordion>
-
-<Accordion title="At least one method required">
-  AfuChat requires that your account always has at least one active sign-in method. You cannot remove a linked account or delete your password if it's the last remaining way to log in.
-</Accordion>
-
 ## Device security
 
 Under the **Device Security** row in Security settings you can configure:
 
 - **PIN lock** — require a numeric PIN to open the app
 - **Biometric unlock** — Face ID or Touch ID (set up automatically after your first password login on a supported device)
-- **Trusted devices** — manage which devices have a stored biometric session
 
-Biometric sign-in works by securely storing an encrypted session token in the device keychain. AfuChat rotates the token on every successful biometric login so old tokens cannot be replayed.
+Biometric sign-in lets you unlock the app instantly without re-entering your password. If biometric authentication is no longer available on a device (for example, after a factory reset), you will be prompted to sign in with your password to re-enable it.
 
 ## Sign out of this device
 
-Signing out from **Settings → Security & Data → Sign Out of This Device** permanently erases all local data — cached messages, downloaded media, and local settings — from that device. Your account and all server-side data remain intact. You will need your password (or biometric, if set up) to sign back in.
+Signing out from **Settings → Security & Data → Sign Out of This Device** permanently erases all local data — cached messages, downloaded media, and local settings — from that device. Your account and all cloud-stored data remain intact. You will need your password (or biometric, if set up) to sign back in.
